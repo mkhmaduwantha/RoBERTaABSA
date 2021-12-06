@@ -127,7 +127,7 @@ if model_type == "roberta":
         model_dir_or_name=args.model_name, requires_grad=True, num_aspect=1
     )
 elif model_type == "bert":
-    # embed the adapter here
+    # embed the adapter training here 
     embed = BertWordPieceEncoder(model_dir_or_name=args.model_name, requires_grad=True)
 elif model_type == "xlnet":
     embed = XLNetModel.from_pretrained(pretrained_model_name_or_path=args.model_name)
